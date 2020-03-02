@@ -8,7 +8,10 @@
     "@testing-library/user-event": "^7.2.1",
     "chess.js": "^0.10.3",
     "chessboardjsx": "^2.4.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
@@ -16,6 +19,11 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
