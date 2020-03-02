@@ -1,0 +1,20 @@
+.page-header {
+  background: blue;
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  .header-name {
+    position: absolute;
+    left: 0;
+  }
+  .current-player {
+    text-align: center;
+  }
+  .github-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 76px;
+    cursor: pointer;
+  }
+}
