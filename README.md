@@ -17,6 +17,6 @@ App will be live at `localhost:3000`
 
 ## License
 
-> You can check out the full license [here](https://github.com/kapillamba4/voice-chess/blob/master/LICENCE)
+> You can check out the full license [here](https://github.com/kapillamba4/voice-chess/blob/master/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
