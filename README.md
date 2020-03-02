@@ -11,7 +11,7 @@ Clone this repo to your desktop and run `npm install` to install all the depende
 
 Once the dependencies are installed, you can run `npm start` to start the application.
 
-App will be live at `localhost:4200`
+App will be live at `localhost:3000`
 
 ---
 
