@@ -101,7 +101,7 @@ export function makeMove(payload) {
       Object.keys(oldFenMap).forEach(val => {
         if (newFenMap[val] !== oldFenMap[val]) {
           utterThis = new SpeechSynthesisUtterance(
-            `${pieceName[val]} Eliminated`
+            `${pieceName[val]} Eliminated.`
           );
           utterThis.onend = function(event) {
             console.log("SpeechSynthesisUtterance.onend");
@@ -114,6 +114,19 @@ export function makeMove(payload) {
           synth.speak(utterThis);
         }
       });
+
+      utterThis = new SpeechSynthesisUtterance(
+        `${fen.split(" ")[1] === "w" ? "White" : "Black"} turn next.`
+      );
+      utterThis.onend = function(event) {
+        console.log("SpeechSynthesisUtterance.onend");
+      };
+      utterThis.onerror = function(event) {
+        console.error("SpeechSynthesisUtterance.onerror");
+      };
+
+      utterThis.rate = 1.2;
+      synth.speak(utterThis);
       dispatch({
         type: actionTypes.MAKE_MOVE_SUCCESS,
         payload: {
